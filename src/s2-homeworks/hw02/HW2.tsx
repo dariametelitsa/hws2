@@ -17,11 +17,11 @@ import s2 from '../../s1-main/App.module.css'
 * */
 
 // types
-export type AffairPriorityType = 'all' | 'low' | 'middle' | 'high' // need to fix any
+export type AffairPriorityType =  'low' | 'middle' | 'high' // need to fix any
 export type AffairType = {
     _id: number // need to fix any
     name: string // need to fix any
-    priority: AffairPriorityType
+    priority: 'all' | AffairPriorityType
 }
 export type FilterType = 'all' | AffairPriorityType
 
@@ -35,7 +35,7 @@ const defaultAffairs: AffairType[] = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType[], filter: AffairPriorityType): AffairType[] => { // need to fix any
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => { // need to fix any
     //return affairs
     if (filter === 'all') return affairs;
     return affairs.filter(affair => affair.priority === filter); // need to fix

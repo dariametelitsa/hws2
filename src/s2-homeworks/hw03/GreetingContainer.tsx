@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Dispatch, KeyboardEvent, SetStateAction, useState } from 'react'
+import React, { ChangeEvent, KeyboardEvent, useState } from 'react'
 import Greeting from './Greeting'
 import { UserType } from './HW3'
 
@@ -9,7 +9,7 @@ type GreetingContainerPropsType = {
 
 export const pureAddUser = (name: string, setError: React.Dispatch<React.SetStateAction<string | null>>, setName: React.Dispatch<React.SetStateAction<string>>, addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
-    if(name) {
+    if (name) {
         addUserCallback(name);
         setName('');
         setError(null);
@@ -20,15 +20,14 @@ export const pureAddUser = (name: string, setError: React.Dispatch<React.SetStat
 }
 
 export const pureOnBlur = (name: string, setError: React.Dispatch<React.SetStateAction<string | null>>) => { // если имя пустое - показать ошибку
-    if(!name) {
+    if (!name) {
         setError('Name can\'t be empty');
         return;
-    }
-    else setError(null);
+    } else setError(null);
 }
 
 export const pureOnEnter = (e: KeyboardEvent, addUser: () => void) => { // если нажата кнопка Enter - добавить
-    if(e.key === 'Enter') {
+    if (e.key === 'Enter') {
         addUser();
     }
 }
@@ -38,9 +37,9 @@ export const pureOnEnter = (e: KeyboardEvent, addUser: () => void) => { // ес�
 
 // более современный и удобный для про :)
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
-    users,
-    addUserCallback,
-}) => {
+                                                                     users,
+                                                                     addUserCallback,
+                                                                 }) => {
     // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
     const [error, setError] = useState<string | null>(null) // need to fix any
@@ -62,7 +61,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = totalUsers != 0 ? users[totalUsers - 1].name : 'unknown' // need to fix
+    const lastUserName = totalUsers != 0 && !error ? users[totalUsers - 1].name : '' // need to fix
 
     return (
         <Greeting

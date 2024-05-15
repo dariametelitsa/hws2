@@ -1,20 +1,35 @@
 .input:focus {
+    outline: 2px solid lightseagreen;
 }
 
 .input {
+    width: 100%;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid grey;
 }
 
 .inputWrapper {
+    /*margin-top: 20px;*/
+    position: relative;
 }
 
 .superInput {
+
 }
 
 .errorInput {
+    border: 2px solid red;
 }
 
 .errorInput:focus {
+
 }
 
 .error {
+    font-size: 10px;
+    position: absolute;
+    top: -16px;
+    left: 0;
+    color: red;
 }

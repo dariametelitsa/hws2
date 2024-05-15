@@ -21,6 +21,7 @@ const Stand = () => {
                         onChange={(e) => setValue(e.currentTarget.value)}
                     />
                 </div>
+
                 {/*инпут с ошибкой:*/}
                 <div>
                     <SuperInputText

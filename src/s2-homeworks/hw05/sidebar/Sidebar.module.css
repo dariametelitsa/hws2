@@ -1,5 +1,6 @@
 .sidebar {
-    display: none;
+    /*display: none;*/
+    transform: translateX(-100%);
 }
 
 .sidebar.open {
@@ -13,6 +14,8 @@
     line-height: 27px;
     background-color: #fff;
     z-index: 99;
+    transform: translateX(0%);
+    transition: 0.2s ease;
 }
 
 .background {

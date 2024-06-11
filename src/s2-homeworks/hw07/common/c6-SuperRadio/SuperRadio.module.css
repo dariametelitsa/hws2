@@ -1,5 +1,6 @@
 .radio {
     background-color: transparent;
+    appearance: none;
 }
 
 .radio::before {

@@ -1,21 +1,20 @@
 .sidebar {
-    /*display: none;*/
-    transform: translateX(-100%);
-}
-
-.sidebar.open {
-    display: block;
-    position: fixed;
+    position: absolute;
+    left: 0;
     max-width: 350px;
     height: 100%;
     padding: 63px 70px;
     font-size: 22px;
     font-weight: 600;
     line-height: 27px;
-    background-color: #fff;
     z-index: 99;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 0.4s ease;
+}
+
+.sidebar.open {
     transform: translateX(0%);
-    transition: 0.2s ease;
 }
 
 .background {

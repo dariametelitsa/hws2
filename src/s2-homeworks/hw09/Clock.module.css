@@ -1,14 +1,23 @@
 .buttonsContainer {
+    display: flex;
+    gap: 20px;
 }
 
 .clock {
+    position: relative;
 }
 
 .watch {
+    margin-bottom: 50px;
 }
 
 .watch strong {
 }
 
 .more {
+    position: absolute;
+    top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0.5;
 }

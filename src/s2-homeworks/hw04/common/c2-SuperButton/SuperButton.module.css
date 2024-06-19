@@ -9,9 +9,11 @@
 }
 
 .disabled {
-    opacity: 50%;
-    color: #002E5C;
-    background-color: #004D99;
+    opacity: 40%;
+    /*color: #002E5C;*/
+    color: white;
+    background-color: #0066CC;
+;
 }
 
 .secondary {

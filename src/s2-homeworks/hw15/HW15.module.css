@@ -8,18 +8,28 @@
 
 .techHeader {
     width: 50vw;
+    display: flex;
 }
 
 .developerHeader {
-
+    display: flex;
 }
 
 .row {
     display: flex;
+    padding: 10px 20px;
+}
+
+.row:not(:last-child) {
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .rowHeader {
     display: flex;
+    background-color: #E5E5E5;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .loading {
